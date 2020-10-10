@@ -4,20 +4,22 @@ echo "Olá, vou lhe ajudar a instalar o servidor HTTP Lighttpd sem precisar de s
 echo "É importante que você compreenda que é para uso apenas educacional. Não tente rodar projetos reais (produção) com ele, pois muitas bibliotecas de segurança podem estar desativadas para permitir a execução."
 echo "Primeiro me informe, por favor, se seu computador é provido de internet. (sim/não)"
 read internet
-
+latest="lighttpd-1.4.45"
 if [ $internet == "sim" ]
 then
 	echo "OK, vou baixar uma das últimas versões do Lighttpd (1.4.45 foi a última que testei), aguarde..."
-	`wget http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.45.tar.gz -O server.tar.gz`
+	`wget https://download.lighttpd.net/lighttpd/releases-1.4.x/latest.txt`
+	latest=`cat latest.txt`
+	`wget https://download.lighttpd.net/lighttpd/releases-1.4.x/$latest.tar.gz -O server.tar.gz`
+	rm latest.txt
 	echo "Terminei o download! Descompactando..."
-	
 else
 	echo "OK, vou utilizar o que veio no pacote, aguarde..."
 	`cp pack.tar.gz server.tar.gz`
 fi
 `tar -xzf server.tar.gz`
-`mv lighttpd-1.4.45 server-src`
-echo "Entrando no diretório do código fonte..."
+`mv $latest server-src`
+echo "Entrando no diretório do código fonte... [$latest]"
 cd server-src
 echo "Configurando o make e executando"
 mkdir ~/lighttpd
