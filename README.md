@@ -11,6 +11,18 @@ Planos para o futuro:
 - criar uma pequena home padrão com tutoriais para uso em sala de aula presencial/remota de temas como: configuração de um servidor HTTP, configuração e deploy de uma aplicação web;
 - Criar scripts que facilitem executar, reiniciar e desinstalar o pacote.
 
+# Estrutura da instalação
+O lighttpd será instalado no diretório HOME do usuário corrente, e o nome da pasta será lighttpd.
+Internamente segue o esboço abaixo:
+-lighttpd
+  |\_etc
+  |   \_lighttpd.conf (Arquivo de configuração do servidor)
+  |\_lib
+  |\_sbin
+  |   \_lighttpd (binário para iniciar o servidor)
+  |\_share
+  \_www (diretório para armazenar os sites - é necessário reiniciar o serviço sempre que houver alteração em seu conteúdo)
+
 ## Como ajudar
 Se você encontrar uma falha, ou tiver sugestões de funcionalidades, por favor, abra uma "issue" no repositório.
 
