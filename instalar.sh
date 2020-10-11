@@ -7,10 +7,23 @@ read internet
 latest="lighttpd-1.4.45"
 if [ $internet == "sim" ]
 then
-	echo "OK, vou baixar uma das últimas versões do Lighttpd (1.4.45 foi a última que testei), aguarde..."
+	echo "OK, vou baixar uma das últimas versões do Lighttpd (1.4.55 foi a última que testei), aguarde..."
 	`wget https://download.lighttpd.net/lighttpd/releases-1.4.x/latest.txt`
 	latest=`cat latest.txt`
-	`wget https://download.lighttpd.net/lighttpd/releases-1.4.x/$latest.tar.gz -O server.tar.gz`
+	`wget https://download.lighttpd.net/lighttpd/releases-1.4.x/$latest.tar.gz`
+	`wget https://download.lighttpd.net/lighttpd/releases-1.4.x/$latest.sha256sum`
+	`sha256sum --check $latest.sha256sum --ignore-missing --status`
+	`rm $latest.sha256sum`
+    confere=$?
+    if [ confere == 1 ]
+    then
+        echo "Não posso garantir a segurança do arquivo baixado."
+        echo "Contate o desenvolvedor do script."
+        exit
+    else
+        echo "Checksum [OK]"
+        `mv $latest.tar.gz server.tar.gz`
+    fi
 	rm latest.txt
 	echo "Terminei o download! Descompactando..."
 else
