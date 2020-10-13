@@ -52,7 +52,7 @@ rm server.tar.gz
 echo "4 - Instalação concluída, aguarde configuração inicial do servidor..."
 cd ~/lighttpd
 echo "5 - Criando pastas de configuração e armazenamento dos arquivos web..."
-mkdir etc www uploads logs
+mkdir etc www uploads logs deps
 echo "6 - Criando arquivo de configuração"
 touch etc/lighttpd.conf
 mkdir www/cgi-bin
