@@ -41,7 +41,7 @@ echo "1 - Diretório destino criado."
 # Por exemplo, para instalar e rodar num datashow que rodava um linux bem limitado, precisava desativar também
 # o pcre. Então, se ao tentar executar o script, você perceber que ele acusa que não tem uma biblioteca (ele
 # mostra isso ao chegar no passo 2 e 3), basta procurar qual opção desativa o uso dessa biblioteca.
-./configure --prefix=$HOME/lighttpd --without-bzip2 #--without-pcre
+./configure --prefix=$HOME/lighttpd --with-openssl --without-bzip2 #--without-pcre
 echo "2 - Make configurado."
 make
 echo "3 - Make preparado"
