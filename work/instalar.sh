@@ -124,61 +124,6 @@ echo '#!/bin/bash
 '>>restart.sh
 `chmod +x restart.sh`
 
-
-
-# É possível já criar um site raiz.
-echo "8 - Deseja já criar uma página inicial? [sim/não]"
-read opcao
-if [ $opcao == 'sim' ]
-then
-    echo "Criando index.html"
-    touch www/index.html
-    echo '<!doctype html>
-    <html>
-    <head>
-    <meta charset="utf-8">
-    <title>Lighttpd-no-root</title>
-    </head>
-    <body>
-    <h1>Lighttpd-no-root</h1>
-    <p>Que legal que você conseguiu instalar e
-    executar o servidor sem precisar de acesso de
-    administrador.</p>
-    <p>Para fazer seus próprios testes, basta trabalhar
-    dentro da pasta <i>www</i> (onde os sites são
-    hospdados).</p>
-    <p>Sempre que algo der errado, fique a vontade
-    para nos contatar no github do projeto, abrindo
-    uma issue, e se possível, anexando o arquivo
-    erros.log</p>
-    <br>
-    <hr>
-    <br>
-    <p>Como a compilação e instalação do PHP é
-    mais complexa de adaptar a dispositivos generalistas
-    e sem acesso root, ainda não fornecemos esse suporte
-    via script.<br>
-    Porém, se você desejar, pode instalar em sua
-    máquina e inserir a configuração a seguir ao final
-    do arquivo etc/lighttpd.conf:<br><br>
-    fastcgi.server = ( ".php" => ((<br>
-        "bin-path" => "/caminho para/php-cgi",<br>
-        "socket" => "/tmp/php.socket"<br>
-    )))cgi.assign = ( ".php" => "/caminho para/php" )
-    <br><br>
-    Lembrando de preencher corretamente o caminho para
-    os binários php-cgi e php da sua instalação.
-    </p>
-    </body>
-    </html>
-    '>>www/index.html
-else
-    echo "Ok, não vamos criar nada lá."
-fi
-
-# Por enquanto não adicionei suporte ao PHP pois ele
-# depende de várias bibliotecas que não são tão comuns.
-
 echo "Muito bem, agora vou iniciar o servidor, faça bom proveito!"
 echo "Lembre-se que o servidor está rodando em http://localhost:3000"
 echo "Para iniciar, reiniciar ou parar o servidor, utilize os scripts criados na raiz da instalação."

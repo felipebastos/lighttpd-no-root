@@ -1,8 +1,10 @@
 NOME = 'lighttpd-no-root'
-VERSAO = 0.5
+VERSAO = 0.5.1
 SUMAPP = sha256sum
 
-all: clean-before generate-build update-checksum checksum
+all: generate-build update-checksum checksum
+
+reall: clean-before all
 
 clean-before:
 	@ echo 'Limpando última versão'
