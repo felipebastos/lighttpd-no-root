@@ -1,6 +1,6 @@
 # LIGHTTPD-NO-ROOT
 ## Downloads
-Todos os builds e checksums estão na pasta [builds](https://www.github.com/felipebastos/lighttpd-no-root/builds/) do repositório.
+Todos os builds e checksums estão na pasta [builds](https://github.com/felipebastos/lighttpd-no-root/releases) do repositório.
 
 ## O que é o Lighttpd-no-root?
 Um script que permite instalar e executar o Lighttpd em sistemas Linux sem necessidade de acesso root.
