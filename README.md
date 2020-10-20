@@ -1,26 +1,33 @@
-# lighttpd-no-root
+# LIGHTTPD-NO-ROOT
+## Downloads
+Todos os builds e checksums estão na pasta [builds](https://www.github.com/felipebastos/lighttpd-no-root/builds/) do repositório.
+
+## O que é o Lighttpd-no-root?
 Um script que permite instalar e executar o Lighttpd em sistemas Linux sem necessidade de acesso root.
 
 O que o script já faz:
 - Permite escolher dentre baixar a última versão disponível do servidor (o que pode trazer novos desafios de configuração não previstos);
 - Faz checksum do download para garantir a integridade;
-- Caso o aparelho em questão não tenha acesso a rede, o "pack.tar.gz" contém a versão 1.4.45, para instalação "offline".
+- Caso o aparelho em questão não tenha acesso a rede, o "pack.tar.gz" contém a versão 1.4.55, para instalação "offline".
+- habilitado o FastCGI ou similar para uso/estudo de PHP 7.4;
+- Criados scripts que facilitem executar, reiniciar e desinstalar o pacote.
 
 Planos para o futuro:
-- habilitar o FastCGI ou similar para uso/estudo de PHP;
-- criar uma pequena home padrão com tutoriais para uso em sala de aula presencial/remota de temas como: configuração de um servidor HTTP, configuração e deploy de uma aplicação web;
-- Criar scripts que facilitem executar, reiniciar e desinstalar o pacote.
+- criar uma pequena home padrão com tutoriais para uso em sala de aula presencial/remota de temas como: configuração de um servidor HTTP, configuração e deploy de uma aplicação web em PHP;
 
-# Estrutura da instalação
-O lighttpd será instalado no diretório HOME do usuário corrente, e o nome da pasta será lighttpd.
+## Estrutura da instalação
+O lighttpd será instalado em HOME/lighttpd.
 Internamente segue o esboço abaixo:
 - lighttpd
+  - deps (o PHP será instalado aqui)
   - etc
     - lighttpd.conf (Arquivo de configuração do servidor)
   - lib
+  - logs (logs de funcionamento e erro do sistema)
   - sbin
     - lighttpd (binário para iniciar o servidor)
   - share
+  - uploads (configurado previamente para guardar arquivos que algum script permita upload)
   - www (diretório para armazenar os sites - é necessário reiniciar o serviço sempre que houver alteração em seu conteúdo)
 
 ## Como ajudar
