@@ -1,6 +1,6 @@
 # LIGHTTPD-NO-ROOT
 ## Downloads
-Todos os builds e checksums estão na pasta [builds](https://github.com/felipebastos/lighttpd-no-root/releases) do repositório.
+Todos os builds e checksums estão na pasta [build](https://github.com/felipebastos/lighttpd-no-root/releases) do repositório.
 
 ## O que é o Lighttpd-no-root?
 Um script que permite instalar e executar o Lighttpd em sistemas Linux sem necessidade de acesso root.
@@ -63,14 +63,14 @@ Se houver alguma funcionalidade comum nos estudos de instalação e configuraç�
 Se ocorrer algum erro na execução dos scripts, na compilação dos pacotes, ou na execução dos mesmos, abra uma *issue* em que descreve o erro, que comandos você executou e anexe conteúdo útil como: texto no terminal do começo da execução do comando até o final (isso pode ajudar pois pode evidenciar um erro de compilação, ou a ausência de uma biblioteca), ou o lighttpd.conf e logs do servidor (na pasta logs da instalação).
 
 ### Como desenvolvedor
-Se quiser ajudar a refinar o projeto ou adicionar novas funcionalidades, fique a vontade para me contatar no [telegram][t.me/felipebasnun] ou no [twitter][https://www.twitter.com/ehlogico_], e quem sabe eu lhe adiciono ao repositório para poder realizar *pull requests* e etc.
+Se quiser ajudar a refinar o projeto ou adicionar novas funcionalidades, fique a vontade para me contatar no <a href="https://t.me/felipebasnun">telegram</a> ou no [twitter][https://www.twitter.com/ehlogico_], e quem sabe eu lhe adiciono ao repositório para poder realizar *pull requests* e etc.
 
 # Dependências
 O pacote inclui:
-  - Lighttpd 1.4.55, também licenciado sob a BSD, disponível  em seu [site oficial][http://www.lighttpd.net/]
-  - PHP 7.4.11, licenciado sob a licença PHP, disponível em seu [site oficial][https://www.php.net]
-  - Sqlite 3, software em domínio público, disponível em seu [site oficial][https://sqlite.org/index.html]
-  - LibXML2, sob a licença MIT, disponível em seu [site oficial][http://www.xmlsoft.org/]
+  - Lighttpd 1.4.55, também licenciado sob a BSD, disponível  em seu <a href="http://www.lighttpd.net/">site oficial</a>
+  - PHP 7.4.11, licenciado sob a licença PHP, disponível em seu <a href="https://www.php.net">site oficial</a>
+  - Sqlite 3, software em domínio público, disponível em seu <a href="https://sqlite.org/index.html">site oficial</a>
+  - LibXML2, sob a licença MIT, disponível em seu <a href="http://www.xmlsoft.org/">site oficial</a>
 
 Se apesar do checksum você não se sentir seguro em utilizar os arquivos inclusos no pacote, fique a vontade para realizar seu download, apenas os renomeando para o mesmo nome utilizado pelos scripts.
 
