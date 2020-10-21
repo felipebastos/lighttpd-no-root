@@ -63,7 +63,7 @@ Se houver alguma funcionalidade comum nos estudos de instalação e configuraç�
 Se ocorrer algum erro na execução dos scripts, na compilação dos pacotes, ou na execução dos mesmos, abra uma *issue* em que descreve o erro, que comandos você executou e anexe conteúdo útil como: texto no terminal do começo da execução do comando até o final (isso pode ajudar pois pode evidenciar um erro de compilação, ou a ausência de uma biblioteca), ou o lighttpd.conf e logs do servidor (na pasta logs da instalação).
 
 ### Como desenvolvedor
-Se quiser ajudar a refinar o projeto ou adicionar novas funcionalidades, fique a vontade para me contatar no <a href="https://t.me/felipebasnun">telegram</a> ou no [twitter][https://www.twitter.com/ehlogico_], e quem sabe eu lhe adiciono ao repositório para poder realizar *pull requests* e etc.
+Se quiser ajudar a refinar o projeto ou adicionar novas funcionalidades, fique a vontade para me contatar no <a href="https://t.me/felipebasnun">telegram</a> ou no <a href="https://www.twitter.com/ehlogico_">twitter</a>, e quem sabe eu lhe adiciono ao repositório para poder realizar *pull requests* e etc.
 
 # Dependências
 O pacote inclui:
