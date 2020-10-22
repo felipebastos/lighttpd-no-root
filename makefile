@@ -2,7 +2,7 @@
 # Felipe Bastos Nunes - 21/Oct/2020
 # Leia o arquivo LICENSE para detalhes sobre cópia e uso deste pacote.
 NOME = 'lighttpd-no-root'
-VERSAO = 0.5.2
+VERSAO = 0.5.3
 SUMAPP = sha256sum
 
 all: generate-build update-checksum checksum
